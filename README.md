@@ -1,2 +1,2 @@
-# Arbeitszeit-pro 0.1
+# Arbeitszeit-pro 1.0
 Meine Arbeitszeiterfassungs-App
