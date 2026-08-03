@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Arbeitszeit Pro</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="app">
+
+
+<h1>Arbeitszeit Pro</h1>
+
+
+<div class="kopf">
+
+<div id="datum"></div>
+
+<div id="uhrzeit"></div>
+
+</div>
+
+
+
+
+<div class="karte">
+
+<h2>Status</h2>
+
+<div id="status">
+Nicht gestartet
+</div>
+
+</div>
+
+
+
+
+
+<div class="karte">
+
+<h2>Zeiterfassung</h2>
+
+
+<p>
+Kommen:
+<b id="kommen">--:--</b>
+</p>
+
+
+<p>
+Gehen:
+<b id="gehen">--:--</b>
+</p>
+
+
+<p>
+Anwesenheit:
+<b id="anwesenheit">0,00 h</b>
+</p>
+
+
+<p>
+Pause:
+<b id="pause">0,75 h</b>
+</p>
+
+
+<p>
+Arbeitszeit:
+<b id="arbeit">0,00 h</b>
+</p>
+
+
+<p>
+Saldo:
+<b id="saldo">0,00 h</b>
+</p>
+
+
+<p>
+Zeitkonto:
+<b id="konto">0,00 h</b>
+</p>
+
+
+<p>
+Feierabend:
+<b id="feierabend">--:--</b>
+</p>
+
+
+
+<button onclick="kommenStarten()">
+🟢 KOMMEN
+</button>
+
+
+<button onclick="gehenStoppen()">
+🔴 GEHEN
+</button>
+
+
+</div>
+
+
+
+
+
+<div class="karte">
+
+<h2>Nachtrag</h2>
+
+
+<label>Datum</label>
+
+<input type="date" id="nachDatum">
+
+
+<label>Kommen</label>
+
+<input type="time" id="nachKommen">
+
+
+<label>Gehen</label>
+
+<input type="time" id="nachGehen">
+
+
+<label>Pause Minuten</label>
+
+<input type="number" id="nachPause" value="45">
+
+
+<label>Art</label>
+
+<select id="nachArt">
+
+<option>Arbeitszeit</option>
+
+<option>Urlaub</option>
+
+<option>Krankheit</option>
+
+<option>Lehrgang</option>
+
+<option>Schulung</option>
+
+<option>Reisezeit</option>
+
+</select>
+
+
+<button onclick="nachtragSpeichern()">
+💾 Nachtrag speichern
+</button>
+
+
+</div>
+
+
+
+
+
+
+<div class="karte">
+
+<h2>Verlauf</h2>
+
+<div id="verlauf">
+
+Keine Einträge
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="karte">
+
+<h2>Einstellungen</h2>
+
+
+<label>Sollzeit Stunden</label>
+
+<input 
+type="number"
+id="sollzeit"
+value="7"
+step="0.25">
+
+
+<label>Pause Minuten</label>
+
+<input
+type="number"
+id="pauseEinstellung"
+value="45">
+
+
+<button onclick="einstellungenSpeichern()">
+⚙️ Speichern
+</button>
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+<script src="app.js"></script>
+
+
+</body>
+
+</html>
